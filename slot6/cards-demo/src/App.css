@@ -1,0 +1,12 @@
+.bg-blue {
+  background-color: #2196f3;
+}
+.bg-yellow {
+  background-color: #ffeb3b;
+}
+.bg-red {
+  background-color: #f44336;
+}
+.card-body {
+  font-weight: 500;
+}
