@@ -1,11 +1,11 @@
-import NavbarComponent from './components/NavbarComponent';
-import CarouselComponent from './components/CarouselComponent';
-import CardComponent from './components/CardComponent';
-import ReservationForm from './components/ReservationForm';
+import NavbarComponent from "./components/NavbarComponent";
+import CarouselComponent from "./components/CarouselComponent";
+import CardComponent from "./components/CardComponent";
+import ReservationForm from "./components/ReservationForm";
 
 function App() {
   return (
-    <div className="bg-dark text-white">
+    <div className="bg-white text-white">
       <NavbarComponent />
       <CarouselComponent />
       <CardComponent />
