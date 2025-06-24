@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import Question from './Question';
-import Result from './Result';
-import './QuizApp.css';
+import React, { Component } from "react";
+import Question from "./Question";
+import Result from "./Result";
+import "./QuizApp.css";
 
 class QuizApp extends Component {
   constructor(props) {
@@ -10,23 +10,46 @@ class QuizApp extends Component {
       questions: [
         {
           id: 1,
-          question: "What is the capital of France?",
-          options: ["Paris", "London", "Berlin", "Madrid"],
-          answer: "Paris"
+          question: "Which continent is the Sahara Desert located in?",
+          options: ["Asia", "Africa", "Australia", "South America"],
+          answer: "Africa",
         },
         {
           id: 2,
-          question: "What is the largest planet in our solar system?",
-          options: ["Jupiter", "Saturn", "Mars", "Earth"],
-          answer: "Jupiter"
+          question: "What is the closest planet to the Sun?",
+          options: ["Venus", "Earth", "Mercury", "Mars"],
+          answer: "Mercury",
         },
-        // Thêm nhiều câu nữa nếu thích
+        {
+          id: 3,
+          question: "Which country built the Great Wall?",
+          options: ["Japan", "India", "China", "Korea"],
+          answer: "China",
+        },
+        {
+          id: 4,
+          question: "What is the longest river in the world?",
+          options: ["Amazon", "Yangtze", "Nile", "Mississippi"],
+          answer: "Nile",
+        },
+        {
+          id: 5,
+          question: "Who was the first person to walk on the Moon?",
+          options: [
+            "Yuri Gagarin",
+            "Neil Armstrong",
+            "Buzz Aldrin",
+            "Galileo Galilei",
+          ],
+          answer: "Neil Armstrong",
+        },
       ],
+
       currentQuestion: 0,
       selectedAnswer: "",
       score: 0,
       quizEnd: false,
-      showResult: false
+      showResult: false,
     };
   }
 
@@ -65,10 +88,11 @@ class QuizApp extends Component {
   };
 
   render() {
-    const { questions, currentQuestion, selectedAnswer, score, quizEnd } = this.state;
+    const { questions, currentQuestion, selectedAnswer, score, quizEnd } =
+      this.state;
     return (
       <div className="quiz-container">
-        <h1 className="quiz-title">Quiz App</h1>
+        <h1 className="quiz-title">Hỏi xoáy đáp xoay</h1>
         <div className="quiz-card">
           {!quizEnd ? (
             <Question
@@ -81,7 +105,11 @@ class QuizApp extends Component {
               totalQuestions={questions.length}
             />
           ) : (
-            <Result score={score} total={questions.length} onReplay={this.handleReplay} />
+            <Result
+              score={score}
+              total={questions.length}
+              onReplay={this.handleReplay}
+            />
           )}
         </div>
       </div>
