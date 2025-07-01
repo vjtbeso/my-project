@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "React Router Basics (from server)",
+      "content": "This post explains the basics of React Router."
+    },
+    {
+      "id": "2",
+      "title": "React Bootstrap (from server)",
+      "content": "This post shows how to use Bootstrap with React."
+    },
+    {
+      "id": "3",
+      "title": "JavaScript ES6 Features (from server)",
+      "content": "This post covers new features in ES6."
+    }
+  ]
+}
